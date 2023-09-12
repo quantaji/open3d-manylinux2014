@@ -32,6 +32,9 @@ Minimal (remember to choose the python version in `./build/minimal.sh`):
 docker run --rm -it -v ./Open3D-0.17.0:/root/Open3D  -v ./build/minimal.sh:/root/build.sh  -v ./wheels:/root/wheels open3d-cpu-manylinux2014 bash /root/build.sh
 # headless
 docker run --rm -it -v ./Open3D-0.17.0:/root/Open3D  -v ./build/headless.sh:/root/build.sh  -v ./wheels:/root/wheels open3d-cpu-manylinux2014 bash /root/build.sh
+# cuda
+docker run --rm -it -v ./Open3D-0.17.0:/root/Open3D  -v ./build/minimal+cu118.sh:/root/build.sh  -v ./wheels:/root/wheels open3d-cu118-manylinux2014 bash /root/build.sh
+docker run --rm -it -v ./Open3D-0.17.0:/root/Open3D  -v ./build/headless+cu118.sh:/root/build.sh  -v ./wheels:/root/wheels open3d-cu118-manylinux2014 bash /root/build.sh
 ```
 
 
